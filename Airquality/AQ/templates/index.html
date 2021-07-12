@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+
+</head>
+<body>
+	<center><h1>Air Quality prediction using ML</h1></center>
+<form method="post" action="{% url 'predict' %}">
+	{% csrf_token %}
+	<CENTER>
+	<input type="text" name="1" placeholder="CO(GT) EX:2.6" size="40"><br><br>
+	<input type="text" name="2" placeholder="PT08.S1(CO) EX:1360.0" size="40"><br><br>
+	<input type="text" name="3" placeholder="NMHC(GT)EX:150.0" size="40"><br><br>
+	<input type="text" name="4" placeholder="PT08.S2(NHMC) EX:1046.0" size="40"><br><br>
+	<input type="text" name="5" placeholder="NOx(GT) EX:166.0" size="40"><br><br>
+	<input type="text" name="6" placeholder="PT08.S3(NOx) EX:1056.0" size="40"><br><br>
+	<input type="text" name="7" placeholder="NO2(GT) EX:113.0" size="40"><br><br>
+	<input type="text" name="8" placeholder="PT08.S5(03) ex:1268.0" size="40"><br><br>
+
+	<input type="text" name="9" placeholder="T EX:13.6" size="40"><br><br>
+	<input type="text" name="10" placeholder="RH EX:48.9" size="40"><br><br>
+	<input type="text" name="11" placeholder="AH EX:0.7578" size="40"><br><br>
+	<input type="submit" name="submit" value="p r e d i c t"><br>
+	
+</form><br>
+<button><a href="{% url 'index' %}"> clear output </a></button>
+<h1>output : {{res}} </h1>
+	</CENTER>
+</body>
